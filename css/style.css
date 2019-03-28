@@ -13,6 +13,9 @@ h1, h2, h3, h4, h5, h6, a, p, span {
 .toHideBlock {
     display: none;
 }
+.is-invalid {
+    border: 2px solid #ff0000;
+}
 
 
 /* --------------Specification-------------- */
@@ -64,7 +67,7 @@ h1, h2, h3, h4, h5, h6, a, p, span {
     line-height: 1.5;
 }
 
-/* -------------------user-info__income------------------- */
+/* -----------------user-info__income----------------- */
 .user-info__income {
     list-style: none;
     margin-bottom: 30px;
@@ -131,7 +134,7 @@ h1, h2, h3, h4, h5, h6, a, p, span {
     text-align: center;
 }
 
-/* ------------------------reviews-container------------------------ */
+/* --------------------reviews-container-------------------- */
 .reviews {
     display: flex;
     flex-direction: column;
@@ -163,16 +166,18 @@ h1, h2, h3, h4, h5, h6, a, p, span {
     display: flex;
     flex-wrap: nowrap;
 }
-.reviews__sum-like {
+
+.reviews__sum-likes {
     margin-right: 20px;
 }
-.reviews__sum-like,
-.reviews__sum-messages {
+.reviews__sum-likes,
+.reviews__sum-all-messages {
     font-size: 12px;
 }
 
-.reviews__social-icons {
-    font-size: 14px;
+.reviews__icon-like,
+.reviews__icon-all-messages {
+    font-size: 16px;
     color: #73b4d5;
     margin-right: 5px;
     cursor: pointer;
@@ -184,10 +189,11 @@ h1, h2, h3, h4, h5, h6, a, p, span {
     flex-direction: column;
 }
 .reviews__no-coment {
-    text-align: center;    
+    margin-top: 50px;
+    text-align: center;
 }
 
-.reviews__item:not(:last-child):not(:first-child) {
+.reviews__item:not(:last-child) {
     margin-bottom: 20px;
 }
 
@@ -235,7 +241,7 @@ h1, h2, h3, h4, h5, h6, a, p, span {
     font-size: 14px;
 }
 
-/* -------------------------------form------------------------------- */
+/* -------------------------------form-------------------------- */
 .form {
     padding: 30px 20px;
     display: flex;
@@ -260,11 +266,15 @@ h1, h2, h3, h4, h5, h6, a, p, span {
     border: none;
     border-radius: 25px;
 }
+.form__button:focus {
+    outline: none;
+}
+.form__button:active {
+    background-color: #dbbe39;
+}
 
 
-
-
-/* -----------------------------media-quares---------------------- */
+/* ------------------------media-quares---------------------- */
 @media screen and (max-width: 480px) {
     .user-info {
         flex-direction: column;
