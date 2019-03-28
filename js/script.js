@@ -53,10 +53,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function startWork(e) {
         e.preventDefault();//отм. стандартное поведение
-        var reg = /\s+/;
-        var regSec = /\s*\b\w+\b\s*.*\s*/;
+        var reg = /^\s+$/;
+        var regSec = /^\s+.+/;
 
-        if( textarea.value.length == 0 || reg.test(textarea.value) && !regSec.test(textarea.value) ) {
+        if( textarea.value.length == 0 || reg.test(textarea.value) && regSec.test(textarea.value) ) {
             textarea.classList.add('is-invalid');
         } else {
             textarea.classList.remove('is-invalid');
